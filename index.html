@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Academy - Eğitim Salonu</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            overflow: hidden;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .left-panel {
+            flex: 1.2;
+            padding: 50px;
+            background-color: #ffffff;
+        }
+
+        .right-panel {
+            flex: 0.8;
+            background-color: #f8fafc;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-left: 2px dashed #e2e8f0;
+        }
+
+        .logo-area {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        .logo-area span {
+            color: #3b82f6;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #64748b;
+            margin-bottom: 40px;
+        }
+
+        .agenda-title {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #0f172a;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .agenda-list {
+            list-style: none;
+        }
+
+        .agenda-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #f1f5f9;
+            font-size: 1.1em;
+        }
+
+        .agenda-item:last-child {
+            border-bottom: none;
+        }
+
+        .time {
+            font-weight: 600;
+            color: #3b82f6;
+        }
+
+        .qr-title {
+            font-size: 1.5em;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .qr-container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+
+        .qr-image {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .wifi-info {
+            text-align: center;
+            color: #64748b;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .wifi-network {
+            font-weight: 700;
+            color: #1e293b;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sol Taraf: Karşılama ve Program -->
+        <div class="left-panel">
+            <div class="logo-area">New <span>Academy</span></div>
+            <div class="subtitle">Eğitim Salonuna Hoş Geldiniz</div>
+
+            <div class="agenda-title">
+                📅 Günün Programı
+            </div>
+            
+            <ul class="agenda-list">
+                <li class="agenda-item">
+                    <span class="time">10:00 - 10:30</span>
+                    <span class="event">Kayıt ve Tanışma Kahvesi</span>
+                </li>
+                <li class="agenda-item">
+                    <span class="time">10:30 - 12:00</span>
+                    <span class="event">1. Oturum</span>
+                </li>
+                <li class="agenda-item">
+                    <span class="time">12:00 - 13:00</span>
+                    <span class="event">Öğle Arası ve Networking</span>
+                </li>
+                <li class="agenda-item">
+                    <span class="time">13:00 - 15:00</span>
+                    <span class="event">2. Oturum ve Değerlendirme</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Sağ Taraf: Wi-Fi QR Kod -->
+        <div class="right-panel">
+            <div class="qr-title">İnternete Bağlanın</div>
+            
+            <div class="qr-container">
+                <!-- Oluşturduğunuz QR kodun adını wifi-qr.png olarak değiştirip aynı klasöre koyun -->
+                <img src="wifi-qr.jpeg" alt="Wi-Fi QR Kodu" class="qr-image">
+            </div>
+
+            <div class="wifi-info">
+                Telefonunuzun kamerasını okutarak<br>şifre girmeden bağlanabilirsiniz.
+                <div class="wifi-network">Ağ Adı: FiberHGW_HU8TEQ</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
